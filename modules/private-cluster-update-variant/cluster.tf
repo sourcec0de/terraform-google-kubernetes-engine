@@ -157,6 +157,10 @@ resource "google_container_cluster" "primary" {
   }
 
   addons_config {
+    cloudrun_config {
+      disabled = !var.cloud_run
+    }
+    
     http_load_balancing {
       disabled = !var.http_load_balancing
     }

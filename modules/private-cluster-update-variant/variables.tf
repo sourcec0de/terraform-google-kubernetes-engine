@@ -398,6 +398,12 @@ variable "dns_cache" {
   description = "The status of the NodeLocal DNSCache addon."
   default     = false
 }
+   
+variable "cloud_run" {
+  type        = bool
+  description = "The status of the Anthos Cloud Run addon."
+  default     = false
+}
 
 variable "authenticator_security_group" {
   type        = string
